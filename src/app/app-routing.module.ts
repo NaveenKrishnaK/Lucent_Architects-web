@@ -1,10 +1,9 @@
 import { NgModule } from "@angular/core";
-import { LoginComponent } from "./login/login.component";
 import { RouterModule } from "@angular/router";
 
 
 const routes = [
-    { path: "login", component: LoginComponent }
+    { path: '', loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule) }
 ]
 
 @NgModule({
